@@ -1,0 +1,11 @@
+name: On PR Review Workflow
+
+on:
+  pull_request_review:
+
+jobs:
+  log-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print PR review event
+        run: echo "Pull Request Review event triggered!"
