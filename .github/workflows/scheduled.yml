@@ -1,0 +1,12 @@
+name: Scheduled Run
+
+on:
+  schedule:
+    - cron: '00 04 * * *'  # runs at 9:30 AM IST
+
+jobs:
+  log-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scheduled job
+        run: echo "Scheduled cron job ran"
