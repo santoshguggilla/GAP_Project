@@ -1,0 +1,11 @@
+name: Reusable Workflow
+
+on:
+  workflow_call:
+
+jobs:
+  log-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Triggered from another workflow
+        run: echo "This workflow was called by another"
