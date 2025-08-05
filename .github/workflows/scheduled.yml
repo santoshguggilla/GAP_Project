@@ -2,7 +2,7 @@ name: Scheduled Run
 
 on:
   schedule:
-    - cron: '* * * * *'  # runs at 9:30 AM IST
+    - cron: '*/1 * * * *'  # runs at 9:30 AM IST
 
 jobs:
   log-event:
