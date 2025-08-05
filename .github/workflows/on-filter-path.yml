@@ -1,0 +1,12 @@
+
+name: On Push Path Workflow
+on:
+  push:
+    paths:
+      - 'README.md'
+jobs:
+  log-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print push event
+        run: echo "Push on readme event triggered!"
