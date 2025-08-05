@@ -1,23 +1,11 @@
-name: CI Pipeline
+name: On Push Workflow
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
-  build:
+  log-event:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Set up JDK
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'   # 👈 this is mandatory
-          java-version: '17'
-
-      - name: Build with Maven
-        run: mvn clean install
+      - name: Print push event
+        run: echo "Push event triggered!"
