@@ -1,0 +1,11 @@
+name: Manual Trigger Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  log-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Manual trigger step
+        run: echo "Manually triggered from GitHub UI"
